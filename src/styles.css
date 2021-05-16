@@ -1,0 +1,168 @@
+.full-page {
+  font-family: "Source Sans Pro";
+  border: 9px dotted rgb(157, 223, 240);
+  border-radius: 80px;
+  height: 1100px;
+  background: linear-gradient(rgb(226, 237, 238), snow);
+}
+
+h1 {
+  color: rgb(76, 173, 83);
+  text-decoration-color: #fefedf;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+h2 {
+  color: rgb(194, 124, 20);
+  text-align: center;
+  font-size: 95px;
+  margin-bottom: -25px;
+  margin-left: 35px;
+  margin-top: -50px;
+  text-decoration-color: #dfdf66;
+}
+
+h4 {
+  text-align: center;
+  color: rgb(10, 118, 126);
+}
+
+h6 {
+  text-align: center;
+  color: rgb(10, 118, 126);
+  font-size: 30px;
+}
+
+.location {
+  position: relative;
+  bottom: 210px;
+  left: 980px;
+}
+
+.col-6 input {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-decoration-color: rgb(91, 179, 91);
+  width: 250%;
+  max-width: 550px;
+  padding: 15px 20px;
+  border: 4px solid rgb(226, 107, 63);
+  border-radius: 30px;
+  color: rgb(91, 179, 91);
+  font-size: 20px;
+  font-weight: 300;
+  transition: 200ms ease-in-out;
+  margin-top: 40px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.col-8 input {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 100px;
+  padding: 15px;
+  border: 4px solid rgb(48, 151, 74);
+  border-radius: 50%;
+  color: rgb(50, 143, 50);
+  text-decoration: underline;
+  background-color: rgb(238, 248, 240);
+  font-size: 20px;
+  font-weight: 300;
+  transition: 200ms ease-in-out;
+  margin-top: -70px;
+  margin-left: 800px;
+  margin-right: 200px;
+  margin-bottom: 35px;
+}
+
+.card-header {
+  display: grid;
+  grid-template-columns: repeat(3);
+  grid-auto-rows: minmax(10px, auto);
+  grid-gap: 100rem;
+  position: relative;
+}
+
+.card-border {
+  border: 2px double green;
+  border-radius: 40px;
+  margin-left: 70px;
+  background-color: rgb(238, 245, 239);
+  margin-top: -20px;
+  margin-right: 0;
+}
+
+.card-city {
+  text-align: center;
+  font-size: 25px;
+}
+
+.card-text {
+  text-align: center;
+  font-size: 20px;
+  color: #457410;
+}
+
+.card-header {
+  text-align: center;
+  font-size: 21px;
+  color: rgb(236, 164, 63);
+}
+
+.card-warning {
+  border: 2px solid #ffc107;
+  border-radius: 40px;
+  margin-left: 420px;
+  margin-right: 0px;
+  margin-top: -250px;
+  margin-bottom: 60px;
+  background-color: #fff6eb;
+}
+
+.card-primary {
+  border: 2px solid #0dc4e8;
+  border-radius: 40px;
+  margin-left: 757px;
+  margin-right: -850px;
+  margin-top: -200px;
+  background-color: #fff6eb;
+}
+
+.card-secondary {
+  border: 2px solid #0dc4e8;
+  border-radius: 40px;
+  margin-right: 400px;
+  margin-left: 420px;
+  margin-top: 20px;
+  background-color: #fff6eb;
+  height: 200px;
+  width: 450px;
+}
+
+.card-danger {
+  border: 2px solid #0dc4e8;
+  border-radius: 40px;
+  margin-right: 200px;
+  margin-left: 757px;
+  margin-top: -215px;
+  background-color: #fff6eb;
+  height: 200px;
+  width: 800px;
+}
+
+.card-info {
+  border: 2px solid #0dc4e8;
+  border-radius: 40px;
+  margin-right: 200px;
+  margin-left: 590px;
+  margin-top: -3px;
+  background-color: #fff6eb;
+  height: 200px;
+  width: 500px;
+}
