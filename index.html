@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Search Engine</title>
+    <title>Weather APP - Week 7</title>
 </head>
 <body>
   <div class="container"> 
@@ -18,8 +18,9 @@
        <h1>
         <strong><em>Weather Forecast</em></strong>
        </h1>
-       <h6>
-         <strong>Sunday, 15:02</strong>
+
+       <h6 id="current-date">
+         <strong>Sunday, 15:02</strong>   
        </h6>
         <form>
             <div class="row">
@@ -42,17 +43,17 @@
             <h2 id = "placeinput">
               <strong> Bragança </strong>
             </h2>
-            
+        
             <div class="card border-success mb-3 card-border" style="max-width: 20rem;">
-              <div class="card-header"><strong><em>16th may</em></strong></div>
+              <div class="card-header"> <strong><em>23th may</em></strong></div>
                 <div class="card-body text-success">
-                  <h5 class="card-city"><strong>Day Temperature </h5>
+                  <h5 class="card-city"> <strong></strong> </h5>   <card-city id ="weather-description"></card-city>
                   <p class="card-text"> 
-                      <img src="images/partly_cloudy.png" alt="City Temperature" class="temperature"  />
+                      <img src="images/partly_cloudy.png" alt="City Temperature" class="temperature" id="icon-weather"/>
                       
                       <span class="temperature" id = "tempDay" >14</span>
-                      <a href = "#" <span class="units" id="celciusTemp"> °C |</a> 
-                       <a href = "#" <span class="units" id ="farenheitTemp">°F </a></span>
+                      <a href = "#" class="units.active" id="celciusTemp"> °C |</a> 
+                       <a href = "#" class="units" id ="fahrenheitTemp">°F </a></span>
                       </br>
                       Pressure: <strong class="pre"></strong>
                       </br>
@@ -63,54 +64,54 @@
                 </div>
               </div>
               <div class="card border-warning mb-3 card-warning" style="max-width: 20rem;">
-                  <div class="card-header"><strong><em>17th may</em></strong></div>
+                  <div class="card-header"><strong><em>24th may</em></strong></div>
                     <div class="card-body text-warning">
-                      <h5 class="card-city"><strong>Day Temperature </h5>
+                      <h5 class="card-city"><strong>Overcast </h5>
                       <p class="card-text"> 
                           <img src="images/partly_cloudy.png" alt="City Temperature" class="temperature"  />
-                          <strong>19°C | 6ºC (Overcast)</strong> 
+                          <strong>19°C | 6ºC</strong> 
                       </p>
                     </div>
                   </div>
                   <div class="card border-primary mb-3 card-primary" style="max-width: 20rem;">
-                      <div class="card-header"><strong><em>18th may</em></strong></div>
+                      <div class="card-header"><strong><em>25th may</em></strong></div>
                         <div class="card-body text-primary">
-                          <h5 class="card-city"><strong>Day Temperature </h5>
+                          <h5 class="card-city"><strong>Overcast </h5>
                           <p class="card-text"> 
                               <img src="images/partly_cloudy.png" alt="City Temperature" class="cloudy"  />
-                              <strong>17°C | 7ºC (Overcast)</strong> 
+                              <strong>17°C | 7ºC </strong> 
                           </p>
                         </div>
                       </div>
                       <div class="card border-secondary mb-3 card-secondary" style="max-width: 20rem;">
-                          <div class="card-header"><strong><em>19th may</em></strong></div>
+                          <div class="card-header"><strong><em>26th may</em></strong></div>
                             <div class="card-body text-secondary">
-                              <h5 class="card-city"><strong>Day Temperature </h5>
+                              <h5 class="card-city"><strong>Light rain shower </h5>
                               <p class="card-text"> 
                                   <img src="images/rain_light.png" alt="City Temperature" class="light"  />
-                                  <strong>15°C | 8ºC (Light rain shower) </strong> 
+                                  <strong>15°C | 8ºC </strong> 
                               </p>
                             </div>
                           </div> 
                          
                           <div class="card border-danger mb-3 card-danger" style="max-width: 20rem;">
-                              <div class="card-header"><strong><em>20th may</em></strong></div>
+                              <div class="card-header"><strong><em>27th may</em></strong></div>
                                 <div class="card-body text-danger">
-                                  <h5 class="card-city"><strong>Day Temperature </h5>
+                                  <h5 class="card-city"><strong>Light rain shower</h5>
                                   <p class="card-text"> 
                                       <img src="images/rain_light.png" alt="City Temperature" class="light"  />
-                                      <strong>18°C | 9ºC (Light rain shower) </strong> 
+                                      <strong>18°C | 9ºC </strong> 
                                   </p>
                                 </div>
                               </div> 
                           
                               <div class="card border-info mb-3 card-info" style="max-width: 20rem;">
-                                  <div class="card-header"><strong><em>21st may</em></strong></div>
+                                  <div class="card-header"><strong><em>28th may</em></strong></div>
                                     <div class="card-body text-info">
-                                      <h5 class="card-city"><strong>Day Temperature </h5>
+                                      <h5 class="card-city"><strong>Light rain shower </h5>
                                       <p class="card-text"> 
                                           <img src="images/rain_light.png" alt="City Temperature" class="light"  />
-                                          <strong>16°C | 8ºC (Light rain shower) </strong> 
+                                          <strong>16°C | 8ºC</strong> 
                                       </p>
                                     </div>
                                   </div> 

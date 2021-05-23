@@ -1,7 +1,3 @@
-//Week 5 Homework
-
-//👨‍🏫Your task
-
 function locationSearch(city) {
   let apiKey = "8f9aad3b8a1db633c9b6d2d3308648b9";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
@@ -27,9 +23,23 @@ function showTemperature(response) {
   let city = response.data.name;
   let h2 = document.querySelector("h2");
   h2.innerHTML = `${city}`;
-}
 
-//🙀 Bonus point:
+  let icon = document.querySelector("#icon-weather");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  icon.setAttribute("alt", response.data.weather[0].description);
+
+  let description = document.querySelector("#weather-description");
+  description.innerHTML = response.data.weather[0].description;
+
+  // Obter o elemento com o id current-date
+  let date = document.querySelector("#current-date");
+
+  // Alterar o valor do element current-date <h6> para o resultado da funçao formatDate
+  date.innerHTML = formatDate(response.data.dt * 1000);
+}
 
 function getLocation(position) {
   let latitude = position.coords.latitude;
@@ -48,29 +58,40 @@ function goLocation(event) {
 let localButton = document.querySelector("#clocation");
 localButton.addEventListener("click", goLocation);
 
-//Week 4 Homework
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
 
-//⏰Feature #1
+  console.log({ date });
 
-let now = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-let day = days[now.getDay()];
-let hour = now.getHours();
-let minutes = now.getMinutes();
-console.log(day);
+  let hours = date.getHours();
 
-let h6 = document.querySelector("h6");
-h6.innerHTML = `${day}, ${hour}:${minutes}`;
+  console.log("Horas: " + hours);
 
-//🕵️‍♀️Feature #2
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  console.log("Minutes: " + minutes);
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[date.getDay()];
+
+  return `${day}, ${hours}:${minutes}`;
+}
+
 function enterLocation(event) {
   console.log("enterLocation");
   event.preventDefault();
@@ -87,21 +108,28 @@ function enterLocation(event) {
 let form = document.querySelector("#enter-submit");
 form.addEventListener("click", enterLocation);
 
-//🙀 Bonus feature
-
-function temperatureCelcius(event) {
-  let temperature = document.querySelector("#tempday");
-  temperature.innerHTML = "14";
+function showFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTempe = (celsiusTemp * 9) / 5 + 32;
+  celsiusShow.classList.remove("active");
+  fahrenheitShow.classList.add("active");
+  let temperature = document.querySelector("#tempDay");
+  temperature.innerHTML = Math.round(fahrenheitTempe);
 }
-let celcius = document.querySelector("#celciusTemp");
-celcius.addEventListener("click", temperatureCelcius);
 
-function temperatureFarenheit(event) {
-  let temperature = document.querySelector("#tempday");
-  temperature.innerHTML = "58";
+function showCelsius(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#tempDay");
+  fahrenheitShow.classList.remove("active");
+  celsiusShow.classList.add("active");
+  temperature.innerHTML = Math.round(celsiusTemp);
 }
-let farenheit = document.querySelector("#farenheitTemp");
-farenheit.addEventListener("click", temperatureFarenheit);
+
+let fahrenheitShow = document.querySelector("#fahrenheitTemp");
+fahrenheitShow.addEventListener("click", showFahrenheit);
+
+let celsiusShow = document.querySelector("#celsiusTemp");
+celsiusShow.addEventListener("click", showCelsius);
 
 /*Week 3 Homework
 let weather = {

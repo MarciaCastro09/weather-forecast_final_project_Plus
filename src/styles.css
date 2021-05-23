@@ -17,7 +17,7 @@ h1 {
 h2 {
   color: rgb(194, 124, 20);
   text-align: center;
-  font-size: 95px;
+  font-size: 200px;
   margin-bottom: -25px;
   margin-left: 35px;
   margin-top: -50px;
@@ -165,4 +165,24 @@ h6 {
   background-color: #fff6eb;
   height: 200px;
   width: 500px;
+}
+
+#weather-description {
+  font-size: 30px;
+  text-transform: capitalize;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#celsiusTemp {
+  color: #212529;
+  text-decoration: none;
+}
+#celsiusTemp:hover {
+  color: #212529;
+  text-decoration: none;
+  transition: none;
+  cursor: default;
 }
