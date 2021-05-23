@@ -176,13 +176,9 @@ h6 {
   justify-content: center;
 }
 
-#celsiusTemp {
-  color: #212529;
-  text-decoration: none;
-}
-#celsiusTemp:hover {
-  color: #212529;
-  text-decoration: none;
-  transition: none;
+
+.active {
+  color: #131212;
   cursor: default;
+  text-decoration: none;
 }

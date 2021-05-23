@@ -10,7 +10,7 @@ function showTemperature(response) {
   console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   let tempDay = document.getElementById("tempDay");
-  tempDay.innerHTML = `${temperature}ºC`;
+  tempDay.innerHTML = `${temperature}`;
   let pressure = response.data.main.pressure;
   let pre = document.querySelector(".pre");
   pre.innerHTML = `${pressure}km/h`;
@@ -34,10 +34,7 @@ function showTemperature(response) {
   let description = document.querySelector("#weather-description");
   description.innerHTML = response.data.weather[0].description;
 
-  // Obter o elemento com o id current-date
   let date = document.querySelector("#current-date");
-
-  // Alterar o valor do element current-date <h6> para o resultado da funçao formatDate
   date.innerHTML = formatDate(response.data.dt * 1000);
 }
 
@@ -65,8 +62,6 @@ function formatDate(timestamp) {
 
   let hours = date.getHours();
 
-  console.log("Horas: " + hours);
-
   if (hours < 10) {
     hours = `0${hours}`;
   }
@@ -74,8 +69,6 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-
-  console.log("Minutes: " + minutes);
 
   let days = [
     "Sunday",
@@ -110,19 +103,22 @@ form.addEventListener("click", enterLocation);
 
 function showFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitTempe = (celsiusTemp * 9) / 5 + 32;
-  celsiusShow.classList.remove("active");
-  fahrenheitShow.classList.add("active");
   let temperature = document.querySelector("#tempDay");
+  let tempC = parseInt(temperature.innerHTML);
+  let fahrenheitTempe = (tempC * 9) / 5 + 32;
   temperature.innerHTML = Math.round(fahrenheitTempe);
+  fahrenheitShow.classList.add("active");
+  celsiusShow.classList.remove("active");
 }
 
 function showCelsius(event) {
   event.preventDefault();
   let temperature = document.querySelector("#tempDay");
+  let tempF = parseInt(temperature.innerHTML);
+  let celsiusTempe = (tempF - 32) / (9 / 5);
+  temperature.innerHTML = Math.round(celsiusTempe);
   fahrenheitShow.classList.remove("active");
   celsiusShow.classList.add("active");
-  temperature.innerHTML = Math.round(celsiusTemp);
 }
 
 let fahrenheitShow = document.querySelector("#fahrenheitTemp");
