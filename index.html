@@ -9,17 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Weather APP - Week 7</title>
+    <title>Weather APP - Final Project</title>
 </head>
 <body>
   <div class="container"> 
     <div class="card"> 
      <div class="full-page"> 
-       <h1>
+       <h1 class = "tittle-forecast">
         <strong><em>Weather Forecast</em></strong>
        </h1>
 
-       <h6 id="current-date">
+       <h6 class = "date" id="current-date">
          <strong>Sunday, 15:02</strong>   
        </h6>
 
@@ -39,86 +39,35 @@
         <div class="location" >
           <img src="images/location.jpg" alt="com" width="75" id="clocation">
      </div>
-            <h2 id = "placeinput">
-              <strong> Bragança </strong>
+            <h2 class="enter-location" id = "placeinput">
+              Bragança 
             </h2>
         
             <div class="card border-success mb-3 card-border" style="max-width: 20rem;">
               <div class="card-header"> <strong><em>Present Day...</em></strong></div>
                 <div class="card-body text-success">
-                  <h5 class="card-city"> <strong></strong> </h5>   <card-city id ="weather-description"></card-city>
+                  <h5 class="card-city" id = "weather-description"> <strong> Overcast</strong> </h5>   
                   <p class="card-text"> 
-                      <img src="images/partly_cloudy.png" alt="City Temperature" class="temperature" id="icon-weather"/>
-                      
+                      <img src="images/partly_cloudy.png" alt="City Temperature" class="temperature" id="icon-weather"/>        
                       <span class="temperature" id = "tempDay" >14</span>
                       <a href = "#" class="active" id="celsiusTemp"> ºC |</a> 
                        <a href = "#" class="fahrenheitT" id ="fahrenheitTemp">°F </a></span>
                       </br>
-                      Pressure: <strong class="pre"></strong>
+                      Pressure: <strong class="pre"> 1000 km/h </strong>
                       </br>
-                      Humidity: <strong class="hum"></strong>
+                      Humidity: <strong class="hum"> 40%</strong>
                       </br>
-                      Wind: <strong class ="win"></strong>
+                      Wind: <strong class ="win">2.24km/h</strong>
                   </p>
                 </div>
               </div>
-              <div class="card border-warning mb-3 card-warning" style="max-width: 20rem;">
-                  <div class="card-header"><strong><em>25th may</em></strong></div>
-                    <div class="card-body text-warning">
-                      <h5 class="card-city"><strong>Overcast </h5>
-                      <p class="card-text"> 
-                          <img src="images/partly_cloudy.png" alt="City Temperature" class="temperature"  />
-                          <strong>19°C | 6ºC</strong> 
-                      </p>
-                    </div>
-                  </div>
-                  <div class="card border-primary mb-3 card-primary" style="max-width: 20rem;">
-                      <div class="card-header"><strong><em>26th may</em></strong></div>
-                        <div class="card-body text-primary">
-                          <h5 class="card-city"><strong>Overcast </h5>
-                          <p class="card-text"> 
-                              <img src="images/partly_cloudy.png" alt="City Temperature" class="cloudy"  />
-                              <strong>17°C | 7ºC </strong> 
-                          </p>
-                        </div>
-                      </div>
-                      <div class="card border-secondary mb-3 card-secondary" style="max-width: 20rem;">
-                          <div class="card-header"><strong><em>27th may</em></strong></div>
-                            <div class="card-body text-secondary">
-                              <h5 class="card-city"><strong>Light rain shower </h5>
-                              <p class="card-text"> 
-                                  <img src="images/rain_light.png" alt="City Temperature" class="light"  />
-                                  <strong>15°C | 8ºC </strong> 
-                              </p>
-                            </div>
-                          </div> 
-                         
-                          <div class="card border-danger mb-3 card-danger" style="max-width: 20rem;">
-                              <div class="card-header"><strong><em>28th may</em></strong></div>
-                                <div class="card-body text-danger">
-                                  <h5 class="card-city"><strong>Light rain shower</h5>
-                                  <p class="card-text"> 
-                                      <img src="images/rain_light.png" alt="City Temperature" class="light"  />
-                                      <strong>18°C | 9ºC </strong> 
-                                  </p>
-                                </div>
-                              </div> 
-                          
-                              <div class="card border-info mb-3 card-info" style="max-width: 20rem;">
-                                  <div class="card-header"><strong><em>29th may</em></strong></div>
-                                    <div class="card-body text-info">
-                                      <h5 class="card-city"><strong>Light rain shower </h5>
-                                      <p class="card-text"> 
-                                          <img src="images/rain_light.png" alt="City Temperature" class="light"  />
-                                          <strong>16°C | 8ºC</strong> 
-                                      </p>
-                                    </div>
-                                  </div> 
-                          </div>      
-                        </div>
 
-                        <h4>
-                           <footer>
+            
+                <div class  = "weather-forecast" id="forecast"></div>
+
+
+                  <h4>
+                           <footer class="code-márcia">
                            <a
                            href="https://github.com/MarciaCastro09/weather-forecast_projet"
                            target="_blank"
@@ -127,7 +76,7 @@
                            by Márcia Castro
                           </footer>
                           </h4>
-                       
+
                       </div>
                       
       <script src="src/index.js"></script>                
